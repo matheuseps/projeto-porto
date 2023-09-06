@@ -36,3 +36,99 @@
     transform: rotate(360deg);
   }
 }
+
+/* Reset de margens e preenchimento para elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF;
+  color: #011526;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #B2D9F7;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #011526;
+}
+
+/* Estilo da seção de pesquisa */
+.search {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.search input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search button {
+  background-color: #011526;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Estilo da seção de serviços */
+.services {
+  padding: 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: #011526;
+  margin-bottom: 20px;
+}
+
+.service {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #B2D9F7;
+  border-radius: 10px;
+}
+
+.service h3 {
+  color: #011526;
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: #B2D9F7;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .search input[type="text"] {
+    width: 100%;
+  }
+
+  .search button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
