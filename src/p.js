@@ -8,7 +8,7 @@ function ServicoMoto() {
     <div>
       <Header />
 
-      <h2 className='subtitulos'>Serviço Moto</h2>
+     
 
       <div className='texto-tips'>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
