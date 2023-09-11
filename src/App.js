@@ -1,6 +1,12 @@
 import React from 'react';
 import CSS from "./App.css"
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from './header';
+import Footer from './footer';
+import ServicoMoto from './ServicoMoto';
+import ServicoCarro from './ServicoCarro';
+import FaleConosco from './FaleConosco';
+import ServicoGuincho from './ServicoGuincho';
 
 function App() {
   return (
@@ -29,15 +35,35 @@ function App() {
           <a href='ServicoMoto'>Serviço Moto</a>
         </div>
         <div className="service">
-        <a href='ServicoMoto'>Serviço Carro</a>
+        <a href='Servicocarro'>Serviço Carro</a>
         </div>
         <div className="service">
-        <a href='ServicoMoto'>Serviço Guincho</a>
+        <a href='Servicoguincho'>Serviço Guincho</a>
         </div>
         <div className="service">
-        <a href='ServicoMoto'>Fale Conosco</a>
+        <a href='faleconosco'>Fale Conosco</a>
         </div>
       </section>
+      <Router>
+      <div>
+        <Header />
+
+        <Switch>
+          <Route path="/servico-moto" component={ServicoMoto} />
+          <Route path="/servico-carro" component={ServicoCarro} />
+          <Route path="/fale-conosco" component={FaleConosco} />
+          <Route path="/servivo-guincho" component={ServicoGuincho} />
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
+  );
+
+
+
+
+
 
       <h2 className='subtitulos'>Dicas da semana</h2>
       <div className='texto-tips'>
