@@ -47,7 +47,7 @@
 /* Estilo do corpo da página */
 body {
   font-family: Arial, sans-serif;
-  background-color: #FFF;
+  background-color: #c9e3f7;
   color: #011526;
   margin: 0;
   padding: 0;
@@ -55,7 +55,7 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-  background-color: #B2D9F7;
+  background: #011526;
   text-align: center;
   padding: 20px 0;
 }
@@ -64,14 +64,33 @@ header h1 {
   color: #011526;
 }
 
+h2 {
+  padding-left: 20px;
+}
+
+/* Estilo de links */
+a:link {
+  color: #000000;
+  text-decoration: none; /* Remove a sublinhado padrão */
+  font-weight: bold; /* Define a espessura da fonte para negrito */
+  font-size: 20px;
+}
+
+a:hover {
+  color: #000000; /* Cor do link quando o mouse passa por cima */
+  text-decoration: underline; /* Adiciona um sublinhado quando o mouse passa por cima */
+}
+
 /* Estilo da seção de pesquisa */
 .search {
-  text-align: center;
-  padding: 20px 0;
+  text-align: right;
+  padding-top: 10;
+  padding-bottom: 10px;
+  padding-right: 40px;
 }
 
 .search input[type="text"] {
-  width: 80%;
+  width: 45%;
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -79,7 +98,7 @@ header h1 {
 }
 
 .search button {
-  background-color: #011526;
+  background-color: #3b8fd8;
   color: #FFF;
   padding: 10px 20px;
   font-size: 16px;
@@ -89,8 +108,53 @@ header h1 {
   cursor: pointer;
 }
 
+/* Estilos para os botões */
+.buttons {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold
+}
+
+.buttons button {
+  background-color: #c9e3f7; /* Cor de fundo */
+  color: #000000; /* Cor do texto */
+  font-weight: bold;
+  font-size: 15px; /* Tamanho da letra */
+  border: none;
+  padding: 15px 30px; /* Tamanho dos botões */
+  margin-right: 15px; /* Espaço entre os botões */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Efeito de transição na cor de fundo */
+}
+
+.buttons button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para subtitulos da semana */
+.subtitulos {
+  background-color: #011526; /* Cor de fundo verde */
+  color: #ffffff; /* Cor do texto (preto) */
+  padding-left: 10px; /* Espaçamento interno */
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  width:20%; /* Largura do elemento (ajuste conforme necessário) */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-left: 20px; /* Posiciona no lado esquerdo da tela */
+  margin-bottom: 15px; /* Posição embaixa da tela */
+  margin-top: 15px; /* Posição em cima da tela */
+  border-radius: 10px; /* Bordas curvadas (ajuste conforme necessário) */
+}
+
 /* Estilo da seção de serviços */
 .services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
   text-align: center;
 }
@@ -100,25 +164,75 @@ header h1 {
   margin-bottom: 20px;
 }
 
+/* Estilo para os quadrados superiores */
+.upper-services {
+  flex-basis: 100%; /* Faz com que ocupe toda a largura disponível */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo para cada serviço */
 .service {
+  flex: 0 0 calc(25% - 10px); /* Tamanho fixo de 25% da largura com espaçamento */
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #B2D9F7;
+  background-color: #f3f5ca;
   border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .service h3 {
   color: #011526;
 }
 
-/* Estilo do rodapé */
-footer {
-  background-color: #B2D9F7;
+/* Estilo para fazer os serviços ficarem quadrados */
+.service:before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+
+/* Estilo para dicas da semana */
+.texto-tips {
+  background-color: #99e499; /* Cor de fundo verde */
+  padding-left: 10px; /* Espaçamento interno */
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000; /* Cor do texto (preto) */
+  padding: 10px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  width: 50%; /* Largura do elemento (ajuste conforme necessário) */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-left: 20px; /* Posiciona no lado esquerdo da tela */
+  margin-bottom: 15px; /* Posição embaixa da tela */
+  margin-top: 15px; /* Posição em cima da tela */
+  padding-left: 10px; /* Espaçamento interno */
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Estilização do rodapé */
+.footer {
+  background-color: #011526;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Estilo responsivo */
@@ -132,3 +246,4 @@ footer {
     margin-left: 0;
   }
 }
+

@@ -1,36 +1,54 @@
 import React from 'react';
 import CSS from "./App.css"
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function App() {
   return (
     <div>
       <header>
-        <h1>Minha Página Inicial</h1>
+
+        {/* Aba de pesquisa */}
+        <div className="search">
+          <input type="text" placeholder="Pesquisar..." />
+          <button>Login</button>
+        </div>
       </header>
 
-      <section className="search">
-        <input type="text" placeholder="Pesquisar..." />
-        <button>Pesquisar</button>
-      </section>
+      {/* Botões "Sobre nós", "Ajuda" e "Blog" */}
+      <div className="buttons">
+        <button>Sobre nós</button>
+        <button>Ajuda</button>
+        <button>Blog</button>
+      </div>
+
+      <h2 className='subtitulos'>Conheça Nossos Serviços</h2>
 
       <section className="services">
-        <h2>Conheça Nossos Serviços</h2>
+        <br></br>
         <div className="service">
-          <h3>Seguro Moto</h3>
-          <p>Oferecemos seguros de moto para garantir sua segurança nas estradas.</p>
+          <a href='ServicoMoto'>Serviço Moto</a>
         </div>
         <div className="service">
-          <h3>Seguro Carro</h3>
-          <p>Proteja seu veículo com nossos serviços de seguro para carros.</p>
+        <a href='ServicoMoto'>Serviço Carro</a>
         </div>
         <div className="service">
-          <h3>Serviço de Guincho</h3>
-          <p>Estamos prontos para ajudar em situações de emergência com nosso serviço de guincho.</p>
+        <a href='ServicoMoto'>Serviço Guincho</a>
+        </div>
+        <div className="service">
+        <a href='ServicoMoto'>Fale Conosco</a>
         </div>
       </section>
 
-      <footer>
-        <p>Criado por: Live Tech</p>
+      <h2 className='subtitulos'>Dicas da semana</h2>
+      <div className='texto-tips'>
+        <p>Adquira o chip internacional e não perca mais tempo com planos de internet fora do país! Venha fazer parte você também!</p>
+      </div>
+
+      
+
+      <footer className='footer'>
+        <p>“A Porto Seguro projeta segurança pensando em você, e lidera o setor de seguros com suas inovações.”</p>
+        <i>Live Tech</i>
       </footer>
     </div>
   );
